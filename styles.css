@@ -1,0 +1,595 @@
+body{
+    margin: 0px;
+}
+
+@font-face{
+    src:url("Font-Storage/Yellow-Ginger.ttf");
+    font-family: Yellow-Ginger;
+}
+@font-face{
+    src:url("/Font-Storage/GreatVibes-Regular.ttf");
+    font-family: Vibes;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url("Images/bg-fastFood.jpeg");
+    background-size: cover;
+    background-position: center;
+    
+}
+#home{
+    color:hsl(0, 0%, 85%);
+    text-decoration: underline;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
+#logo{
+    width: 200px;
+    height: fit-content;
+}
+
+.navbar ul{ /* The entire nav bar itself */
+    margin-left: -40px;
+    list-style-type: none;
+    display: flex;
+}
+.navbar li{ /*The individual list items itself  */
+    margin: 20px 15px 0px 15px;  
+}
+
+.navbar a{ /*The Text Itself */
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px black;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.navbar a:hover{
+    color:hsl(0, 0%, 85%);
+    text-decoration: underline;
+}
+
+.offers{
+    margin-top: 150px;
+    color: hsl(51, 92%, 47%);
+    font-size: 2.2rem;
+    font-family: Vibes;
+}
+.midBody{
+    text-align: center;
+    text-shadow: 0px 0px 2px black;
+}
+.offers2{
+    margin-top: -15px;
+    font-size: 3.5rem;
+    color: white;
+    font-family: Yellow-Ginger;
+
+}
+.offers3{
+    color: white;
+    margin-top: -35px;
+    font-family: 'Inter', sans-serif;
+}
+
+.buttonHome{
+    border:3px solid white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    background: transparent;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    margin: 15px;
+    transition: 0.3s;
+}
+.buttonHome:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    background-color:#BB9355;
+}
+
+/*----------Menu----------*/
+.heroMenu{
+    background-image: url("Images/restaurant-bg.jpg");
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+#text1{
+    font-family: Vibes;
+    margin-top: -110px;
+    color: #e9a43c;
+    font-size: 1.5rem;
+
+}
+#text2{
+    font-family: Yellow-Ginger;
+    color: white;
+}
+.menu{
+    text-align: center;
+    text-shadow: 0px 0px 4px black;
+}
+/*This part below alone took 2 to 3 days, I had to learn new stuff like position relative and absolute to get this part right, 
+not to mention how to center with position:absolute, and clip-path too*/
+.background {
+    width: 400px;
+    height: 400px;
+    background-color: #eee;
+    display: flex;
+
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.background:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease; 
+}
+
+.child { /*The text itself, price and name*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Inter;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+    opacity: 0; 
+    transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+
+.background:hover .child {
+    opacity: 1; /* Show the text on hover */
+}
+.background:not(:hover){ /*I learned this from ChatGPT, the not pseudoclass*/
+    transition: 0.3s;
+    transform: scale(1);
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+#food1 {
+    background-image: url("food-storage/burger.jpg");
+}
+#food2{
+    background-image: url("food-storage/barbeque-ribs.jpg");
+}
+#food3{
+    background-image: url("food-storage/curly-fries.jpg");
+}
+#food4{
+    background-image: url("food-storage/fish-and-chips.jpeg");
+}
+#food5{
+    background-image: url("food-storage/fried-chicken.jpg");
+}
+#food6{
+    background-image: url("food-storage/fries.jpg")
+}
+#food7{
+    background-image: url("food-storage/grilled-lamb.jpg");
+}
+#food8{
+    background-image: url("food-storage/pizza.jpg");
+}
+#food9{
+    background-image: url("food-storage/Steak.jpg");
+}
+
+
+#btnOrder{
+    display: block;
+    margin: 0 auto;
+}
+@keyframes menu-move-right{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-150px);
+    }
+}
+@keyframes menu-move-left{
+    from{
+        transform: translateX(-150px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.menu-move-right{
+    animation: menu-move-right 1.5s ease-in-out forwards;
+}
+.menu-move-left{
+    animation: menu-move-left 1.5s ease-in-out forwards;
+}
+.order-box{
+    width: 300px;
+    height: 1000px;
+    background-color: #222222;
+    position: absolute;
+    right: 0;
+    top: 290px;
+    transition:transform 0.2s, right 0.2s;
+    display: none;
+}
+.open-order-box{
+    transform: scale(1);
+}
+
+.visibility{
+    display: initial;
+}
+.invisibility{
+    display: none;
+}
+.addFood{
+    cursor: pointer;
+}
+#confirmPayment{
+    display: block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 0 auto;
+    color: white;
+    background: none;
+    font-family: Inter;
+    transition: transform 0.1s;
+    margin-top: 30px;
+}
+#confirmPayment:hover{
+    transform: scale(1.1);
+}
+.totalDetails{
+    font-family: Inter;
+    color: white;
+}
+
+.total{
+    margin:10px 0px 5px 10px;
+}
+.orderDetails{
+    list-style-type: none;
+    font-family: Inter;
+    color: white;
+    padding: 0px;
+    margin-top: -10px;
+}
+.ordDet{
+    display: inline-block;
+    margin-left: 20px;
+}
+.priceFood{
+    width: 30px;
+}
+
+.nameFood{
+    padding-top: 20px;
+    width: 60px;
+}
+.quantity,.btnRemove{
+    margin:10px;
+}
+input[type="number"].quantity{
+    margin-left:30px ;
+    width: 40px;
+    color: black;
+}
+
+.closeOrderMenu{
+    display: block;
+    margin-left:auto;
+    color: #F8F5F8;
+    border: none;
+    background: none;
+    transition: 0.2s;
+}
+.closeOrderMenu:hover{
+    cursor: pointer;
+    color: darkgray;
+}
+.order-box p{
+    color: white;
+    font-family: "Inter";
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.foodDetails{
+    display:inline;
+    color: white;
+    margin: 0px 15px;
+}
+
+.qtydetails{
+    display: inline;
+    margin-left: 35px;
+}
+.footerMenu{
+    font-family: Inter;
+    margin-top: 140px;
+    height: 300px;
+    background-image: linear-gradient(#1E1E1E,#222222);
+}
+
+.grid{
+    display: flex;
+    justify-content: space-around;
+
+}
+#logoFooter{
+    width: 200px;
+    transition: 0.4s;
+}
+#logoFooter:hover{
+    transform: scale(1.2);
+
+} 
+
+.leftFooter p{
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    position: relative;
+}
+.leftFooter p:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e9a43c;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+/*a is the clickable link*/
+.leftFooter a i{ /*The icons themselves*/
+    margin:0px 5px ;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 100%;
+    color: hsl(0, 0%, 95%);
+}
+.leftFooter a i:hover{
+    transition: 0.5s;
+    color: #24262b;
+    background-color: white;
+}
+.border{
+    border-left: 5px solid rgb(147, 147, 147);
+    border-radius: 20px;
+    margin-top: 50px;
+}
+.rightFooter ul li{
+    list-style-type: none;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.rightFooter ul li:hover{
+    transform: scale(1.1);
+    color: hsl(0, 0%, 70%);
+}
+.rightFooter ul{
+    margin-top: 15px;
+    margin-left: -35px;
+}
+.rightFooter p{
+    position: relative;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+.rightFooter p:before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e9a43c;
+    height: 2px;
+    width: 50px;
+    box-sizing: border-box;
+}
+.rightFooter li a{
+    color: white;
+    text-decoration: none;
+    margin-top: 10px 0px;
+    cursor: pointer;
+
+}
+
+
+/*----------Book A Table----------*/
+.book-table{
+    display: flex;
+    justify-content: center;
+}
+.form-title{
+    text-align: center;
+    font-size: 1.85rem;
+
+}
+
+.styleForm{
+    margin:15px;
+    border: none;
+    resize: none;
+    width:200px;
+    background-color: #434141;
+    transition: 0.2s;
+    color: white;
+}
+.styleForm:hover:not(textarea){
+    transform: scale(1.1);
+}
+.question{
+    margin: 15px;
+    width: 220px;
+    display: inline-block;
+}
+.fieldStyle{
+    width: 400px;
+    margin: 30px auto;
+}
+input{
+    padding: 5px 10px;
+}
+
+input[type=text],input[type=number],input[type=date]{
+    color: white;
+}
+.closeRight{
+    display: block;
+    margin-left:auto;
+    transition:0.2s;
+    color: #F8F5F8;
+    border: none;
+    background: none;
+}
+.closeRight:hover{
+    cursor: pointer;
+    color: darkgray;
+}
+select,.date{
+    color: #75756C;
+    background-color: #434141;
+}
+.name{
+    margin-top: 15px;
+    margin-right: 15px;
+    width: 200px;
+}
+.form-property{
+    width: 550px;
+    background-color: #222222;
+    color: white;
+    font-family:"Inter";
+    padding: 15px;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    z-index: 1;
+    overflow-y: scroll;
+    height: 650px;
+    visibility: hidden;
+    transition:transform 0.3s, top 0.4s;
+}
+
+.open-book{
+    transform: translate(-50%,-50%) scale(1);
+    top: 50%;
+    visibility: visible;
+}
+legend, .fieldStyle{
+    text-align: center;
+}
+.btnBook{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+    font-family: "Inter";
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btnBook:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+#reserve-type{
+    padding: 5px;
+    width: 220px;
+
+}
+#request{
+    width: 470px;
+}
+/*Scrollbar style*/
+::-webkit-scrollbar{
+    width: 0.65em;
+}
+::-webkit-scrollbar-track{
+    background-color: #24262b;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #717171;
+    border-radius: 15px;
+
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #565656;
+}
+/*----------About Us----------*/
+.heroAbout{
+    background-color:#1E1E1E;
+    height: 50vh;
+    width: 100%;
+
+
+}
+.about{
+    margin-top: -15px;
+    font-size: 3.5rem;
+    color: white;
+    font-family: Yellow-Ginger;
+    text-align: center;
+    text-shadow: 0px 0px 2px black;
+}
+#aboutDeco{
+    font-size: 4.5rem;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    background-image: url("Images/dark-restaurant-bg.avif");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px; 
+}
+
+#header{
+    font-family: "Inter";
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: underline;
+
+}
+.jonas{
+    width: 500px;
+    margin: 45px;
+}
+main div p{
+    z-index: 2;
+    color: white;
+    text-shadow:0px 0px 3px black ;
+    margin: 75px 15px 15px 15px;
+    
+    font-family: "Inter";
+}
+.footerMargin{
+    margin-top: -1px;
+}

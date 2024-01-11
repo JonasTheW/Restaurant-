@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pearl Inn</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="Images/Restaurant-logo-new.png">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <div class="hero">
+            
+            <nav class="navbar">
+                <img id="logo" src="Images/Restaurant-logo-new.png" class="logo" >               
+                <ul>
+                    <li><a id="home" href="#">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a class="bookMenu">Book A Table</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+                    <li><a href="https://www.wechat.com"><i class="fab fa-weixin fa-2x"></i></a></li>
+                </ul>
+            </nav>
+            <div class="book-table">
+                <div class="form-property">
+                    <button class="closeRight"><i class="fas fa-minus"></i></button>
+                    <p class="form-title">Book A Table</p>
+                    <label for="fullName"  class="question">Full Name</label>
+                    <br>
+                    <input class=" styleForm name" type="text" name="fname" id="fname" placeholder="First Name" required> 
+                    <input class="styleForm name" type="text" name="lname" id="lname" placeholder="Last Name" required> 
+                    <br>
+                    <label class="question" for="email">Email</label>
+                    <input class="styleForm" type="email" name="email" id="email"  placeholder="ex:myname@gmail.com" required>
+                    <br>
+                    <label  class="question" for="phNo">Phone</label>
+                    <input class="styleForm" type="tel" name="phNo" id="phNo" placeholder="ex:0138493698" required pattern="[0-9]{9}">
+                    <br>
+                    <label  class="question" for="noGuest">Number of Guests</label>
+                    <input class="styleForm date" type="number" name="noGuest" id="noGuest" placeholder="ex:3" required min="1">
+                    <br>
+                    <label  class="question" for="reserveDate">Reservation Date</label>
+                    <input  class="styleForm date" type="date">
+                    <br>
+                    <fieldset class="fieldStyle" required>
+                        <legend>Time Selector</legend>
+               
+                        <input type="radio" id="10:00am" name="time" value="10:00 AM">
+                        <label for="10:00am">10:00 AM</label>
+            
+                        <input type="radio" id="12:00pm" name="time" value="12:00 PM">
+                        <label for="12:00pm">12:00 PM</label>
+                        <br>
+                        <input type="radio" id="2:00pm" name="time" value="2:00 PM">
+                        <label for="2:00pm">2:00 PM</label>
+        
+                        <input type="radio" id="4:00pm" name="time" value="4:00 PM">
+                        <label for="4:00pm">4:00 PM</label>
+                        <br>                    
+                        <input type="radio" id="6:00pm" name="time" value="6:00 PM">
+                        <label for="6:00pm">6:00 PM</label>
+        
+                        <input type="radio" id="8:00pm" name="time" value="8:00 PM">
+                        <label for="8:00pm">8:00 PM</label>
+                    </fieldset>
+              
+    
+    
+                    <label for="reserve-type"  class="question">Reservation Type</label>
+                    <select name="reserve-type" class="styleForm" id="reserve-type" required>
+                        <option  value="dinner">Dinner</option>
+                        <option  value="lunch">Lunch</option>
+                        <option  value="wedding">Wedding</option>
+                        <option  value="holiday">Holiday</option>
+                        <option  value="birthday">Birthday</option>
+                        <option value="other">Others</option>
+                    </select>
+                    <div>
+                        <label for="others"  class="question">Others</label>
+                        <input class="styleForm" type="text" name="others" id="others" required>
+                    </div>
+             
+                    <label for="request"  class="question">Any Special Requests?</label>
+                    <br>
+                    <textarea class="styleForm" name="request" id="request" rows="10" cols="55"></textarea>
+                    <br>
+                    <button class="btnBook">Book Now</button>
+                </div>
+            </div>
+            <div class="midBody">
+                <h1 class="offers">Pearl Inn Offers You</h1>
+                <h1 class="offers2">Fresh and Delicious Western Meals</h1>
+                <h3 class="offers3">Pearl Inn offers a taste that cannot be found anywhere else.</h3>
+                <a href="menu.html">
+                    <button class="buttonHome">View Menu</button>
+                </a>
+                <a>
+                    <button class="buttonHome bookMenu">Reserve A Table</button>
+                </a>
+               
+            </div>
+        </div>
+        
+    </body>
+    <script src="script.js"></script>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="Images/Restaurant-logo-new.png">
+        <link rel="stylesheet" href="styles.css">
+        <title>Pearl Inn | About Us</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+    
+    </head>
+
+    <body>
+        
+        <div class="heroAbout">
+            <nav class="navbar">
+                <img id="logo" src="Images/Restaurant-logo-new.png" class="logo" >               
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a class="bookMenu">Book A Table</a></li>
+                    <li><a id="home" href="#">About</a></li>
+                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+                    <li><a href="https://www.wechat.com"><i class="fab fa-weixin fa-2x"></i></a></li>
+                </ul>
+            </nav>
+            <p class="about">Who is <span id="aboutDeco">Pearl Inn?</span></p>
+        </div>
+        <main>
+            <div>
+                <p id="header">About Pearl Inn</p>
+                <p>At Pearl Inn, we believe that great food is the heart of any celebration, and we pour our hearts into every dish we serve. Our journey began with a simple dream – to craft a dining destination where friends and family could come together to savor exceptional flavors in a welcoming setting.</p>
+    
+                <p>Our chefs, inspired by a love for global cuisine, handpick the finest and freshest ingredients to create a menu that bursts with creativity and taste. From the sizzling grills to the delicate desserts, each dish is a masterpiece, carefully curated to delight your palate and leave you craving more.</p>
+                    
+                <p>But Pearl Inn is more than just a place to eat; it's a gathering spot for laughter, conversation, and making memories. Our commitment to hospitality is reflected in our friendly staff, dedicated to ensuring your dining experience is nothing short of exceptional.</p>
+            </div>
+          
+            <img class="jonas" src="Images/jonas.jpg">
+
+        </main>
+
+        <div class="book-table">
+            <div class="form-property">
+                <button class="closeRight"><i class="fas fa-minus"></i></button>
+                <p class="form-title">Book A Table</p>
+                <label for="fullName"  class="question">Full Name</label>
+                <br>
+                <input class=" styleForm name" type="text" name="fname" id="fname" placeholder="First Name" required> 
+                <input class="styleForm name" type="text" name="lname" id="lname" placeholder="Last Name" required> 
+                <br>
+                <label class="question" for="email">Email</label>
+                <input class="styleForm" type="email" name="email" id="email"  placeholder="ex:myname@gmail.com" required>
+                <br>
+                <label  class="question" for="phNo">Phone</label>
+                <input class="styleForm" type="tel" name="phNo" id="phNo" placeholder="ex:0138493698" required pattern="[0-9]{9}">
+                <br>
+                <label  class="question" for="noGuest">Number of Guests</label>
+                <input class="styleForm date" type="number" name="noGuest" id="noGuest" placeholder="ex:3" required min="1">
+                <br>
+                <label  class="question" for="reserveDate">Reservation Date</label>
+                <input  class="styleForm date" type="date">
+                <br>
+                <fieldset class="fieldStyle" required>
+                    <legend>Time Selector</legend>
+           
+                    <input type="radio" id="10:00am" name="time" value="10:00 AM">
+                    <label for="10:00am">10:00 AM</label>
+        
+                    <input type="radio" id="12:00pm" name="time" value="12:00 PM">
+                    <label for="12:00pm">12:00 PM</label>
+                    <br>
+                    <input type="radio" id="2:00pm" name="time" value="2:00 PM">
+                    <label for="2:00pm">2:00 PM</label>
+    
+                    <input type="radio" id="4:00pm" name="time" value="4:00 PM">
+                    <label for="4:00pm">4:00 PM</label>
+                    <br>                    
+                    <input type="radio" id="6:00pm" name="time" value="6:00 PM">
+                    <label for="6:00pm">6:00 PM</label>
+    
+                    <input type="radio" id="8:00pm" name="time" value="8:00 PM">
+                    <label for="8:00pm">8:00 PM</label>
+                </fieldset>
+          
+
+
+                <label for="reserve-type"  class="question">Reservation Type</label>
+                <select name="reserve-type" class="styleForm" id="reserve-type" required>
+                    <option  value="dinner">Dinner</option>
+                    <option  value="lunch">Lunch</option>
+                    <option  value="wedding">Wedding</option>
+                    <option  value="holiday">Holiday</option>
+                    <option  value="birthday">Birthday</option>
+                    <option value="other">Others</option>
+                </select>
+                <div>
+                    <label for="others"  class="question">Others</label>
+                    <input class="styleForm" type="text" name="others" id="others" required>
+                </div>
+         
+                <label for="request"  class="question">Any Special Requests?</label>
+                <br>
+                <textarea class="styleForm" name="request" id="request" rows="10" cols="55"></textarea>
+                <br>
+                <button class="btnBook">Book Now</button>
+            </div>
+        </div>
+
+
+    </body>
+
+    <footer class="footerMenu footerMargin">
+        <div class="grid">
+            <div class="leftFooter">
+                <p>Follow Us on</p>
+                <a href="https://facebook.com"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.wechat.com"><i class="fab fa-weixin fa-2x"></i></a>
+            </div>
+
+         
+            
+            <div class="middleFooter">
+                <a href="#"><img id="logoFooter" src="Images/Restaurant-logo-new.png"></a>
+            </div>
+
+       
+
+            <div class="rightFooter">
+                <p>Visit Our Other Pages</p>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a class="bookMenu">Book A Table</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <script src="about-us.js"></script>
+</html>
